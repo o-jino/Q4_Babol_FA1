@@ -28,3 +28,9 @@ fieldset{
 input{
     border-color:rgb(0, 255, 242);
 }
+select{
+    border-color:rgb(0, 255, 242);
+}
+textarea{
+    border-color:rgb(0, 255, 242);
+}

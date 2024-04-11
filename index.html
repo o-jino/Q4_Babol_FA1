@@ -12,29 +12,29 @@
             <legend id="title"> LOGIN TO JINOTUBE</legend><br><br>
 
                 <label for= "username"> Enter name:</label>
-                <input type="text" id="username" name="username"><br><br>
+                <input type="text" id="username" name="username" onblur='onblur1()'><br><br>
 
                 <label for= "username2"> Enter Prefered username: </label>
-                <input type="text" id="username2" name="username2"><br><br>
+                <input type="text" id="username2" name="username2" onblur='onblur2()'><br><br>
 
                 <label for= "gender"> Select Gender:</label>
-                <select name="usergender" id="gender"><br><br>
+                <select name="usergender" id="gender" onblur='selectonblur()'><br><br>
                 <option value="male"> male </option>
                 <option value="female"> female </option>
                 <option value="PFNT"> Prefer not to say </option>
                 </select><br><br>
 
                 <label for= "email"> Enter Your Email Address: </label>
-                <input type="email" id="email" name="email"><br><br>
+                <input type="email" id="email" name="email"  onblur='onblur3()'><br><br>
 
                 <label for= "password"> Enter Your Password: </label>
-                <input type="password" id="password" name="password"><br><br>
+                <input type="password" id="password" name="password" onblur='onblur4()'><br><br>
 
                 <label for= "Address"> Enter Home Address: </label>
-                <input type="text" id="HomeAddress" name="HomeAddress"><br><br><br><br>
+                <input type="text" id="HomeAddress" name="HomeAddress"  onblur='onblur5()'><br><br><br><br>
 
                 <label for= "interests"> Enter interests: </label><br><br>
-                <textarea name="interest" id="interest" cols="70" rows="7"></textarea><br><br>
+                <textarea name="interest" id="interest" cols="70" rows="7" onblur='onblur6()'></textarea><br><br>
 
                 <input type="submit" value="Login" id="end">
                 <input type="reset" value="reset" id="end">
@@ -42,4 +42,69 @@
         </fieldset>
     </form>
 </body>
+<script>
+
+function onblur1(){
+    var x = document.getElementById("username").value;
+    if (x == ""){
+        username.style.borderColor = "red";
+    }
+    else{
+        username.style.borderColor = "lightgreen";
+    }
+}
+function onblur2(){
+    var x = document.getElementById("username2").value;
+    if (x == ""){
+        username2.style.borderColor = "red";
+    }
+    else{
+        username2.style.borderColor = "lightgreen";
+    }
+}
+function onblur3(){
+    var x = document.getElementById("email").value;
+    if (x == ""){
+        email.style.borderColor = "red";
+    }
+    else{
+        email.style.borderColor = "lightgreen";
+    }
+}
+function onblur4(){
+    var x = document.getElementById("password").value;
+    if (x == ""){
+        password.style.borderColor = "red";
+    }
+    else{
+        password.style.borderColor = "lightgreen";
+    }
+}
+function onblur5(){
+    var x = document.getElementById("HomeAddress").value;
+    if (x == ""){
+        HomeAddress.style.borderColor = "red";
+    }
+    else{
+        HomeAddress.style.borderColor = "lightgreen";
+    }
+}
+function onblur6(){
+    var x = document.getElementById("interest").value;
+    if (x == ""){
+        interest.style.borderColor = "red";
+    }
+    else{
+        interest.style.borderColor = "lightgreen";
+    }
+}
+function selectonblur(){
+    var x=document.getElementById("gender").value;
+    if (x == ""){
+        gender.style.borderColor = "red";
+    }
+    else{
+        gender.style.borderColor = "lightgreen";
+    }
+}</script>
 </html>               

@@ -34,3 +34,14 @@ select{
 textarea{
     border-color:rgb(0, 255, 242);
 }
+#outputfieldset{
+    width: 50vw;
+    height: 50vh;
+    margin-left: 25vw;
+    background-color: black;
+    color: antiquewhite;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    opacity: 90%;
+    border-color: rgb(255, 255, 255);
+}

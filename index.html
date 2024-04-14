@@ -33,16 +33,66 @@
                 <label for= "Address"> Enter Home Address: </label>
                 <input type="text" id="HomeAddress" name="HomeAddress"  onblur='onblur5()'><br><br><br><br>
 
-                <label for= "interests"> Enter interests: </label><br><br>
+                <label for= "interest"> Enter interests: </label><br><br>
                 <textarea name="interest" id="interest" cols="70" rows="7" onblur='onblur6()'></textarea><br><br>
 
-                <input type="submit" value="Login" id="end">
-                <input type="reset" value="reset" id="end">
+                <input onclick="outputinfo()" type="submit" value="Submit" id="end"  >
+                <input onclick="resetinfo()" type="reset" value="reset" id="end">
 
+        </fieldset>
+        <fieldset id="outputfieldset" form="text">
+            <legend>User Login Output:</legend> <br> 
+            <div id="outputname"></div> <br> 
+            <div id="outputusername"></div> <br> 
+            <div id="outputgender"></div> <br> 
+            <div id="outputEmail"></div> <br> 
+            <div id="outputpassword"></div> <br> 
+            <div id="outputAddress"></div> <br> 
+            <div id="outputinterest"></div> <br> 
         </fieldset>
     </form>
 </body>
 <script>
+       function outputinfo(){
+        var N=document.getElementById("username").value;
+        var U=document.getElementById("username2").value;
+        var P=document.getElementById("password").value;
+        var E=document.getElementById("email").value;
+        var A=document.getElementById("HomeAddress").value;
+        var I=document.getElementById("interest").value;
+        var G=document.getElementById("gender").value;
+
+        switch(G){
+            case "PFNT":
+                G="user prefers not to say their gender";
+                break;
+            case "male":
+                G="user gender is: male"
+                break;
+            default:
+                G="user gender is: female"
+                break;
+        }
+
+        document.getElementById("outputname").innerText = "User Name is: " + N;
+        document.getElementById("outputusername").innerText = "User Username is: " + U;
+        document.getElementById("outputgender").innerText = G;
+        document.getElementById("outputpassword").innerText = "User Password is: " + P;
+        document.getElementById("outputEmail").innerText = 'User Email is: ' + E;
+        document.getElementById("outputAddress").innerText = "User Address is: " + A;
+        document.getElementById("outputinterest").innerText = 'User interests are: \n' + I;
+    }
+    function resetinfo(){
+        var R=""
+        document.getElementById("outputname").innerText=R;
+        document.getElementById("outputgender").innerText=R;
+        document.getElementById("outputusername").innerText=R;
+        document.getElementById("outputpassword").innerText=R;
+        document.getElementById("outputEmail").innerText=R;
+        document.getElementById("outputAddress").innerText=R;
+        document.getElementById("outputinterest").innerText=R;
+        
+    }
 
 function onblur1(){
     var x = document.getElementById("username").value;
@@ -106,5 +156,7 @@ function selectonblur(){
     else{
         gender.style.borderColor = "lightgreen";
     }
-}</script>
+}
+ </script>
+
 </html>               
